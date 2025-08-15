@@ -15,8 +15,7 @@ const messages = [
 ];
 
 indexRouter.get("/", (req, res) => {
-  res.locals.messages = messages;
   res.render("index", { messages });
 });
 
-module.exports = indexRouter;
+module.exports = { indexRouter, messages };
