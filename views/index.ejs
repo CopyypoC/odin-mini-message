@@ -14,6 +14,8 @@
     <p>User: <%= messages[i].user %></p>
     <p>Message: <%= messages[i].text %></p>
     <p>Date: <%= messages[i].added %></p>
+    <!-- href has query params with all the post data -->
+    <a href="/post?text=<%= messages[i].text %>&user=<%= messages[i].user %>&added=<%= messages[i].added %>">Open</a>
   </div>
   <% } %>
 </body>

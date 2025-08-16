@@ -18,4 +18,14 @@ indexRouter.get("/", (req, res) => {
   res.render("index", { messages });
 });
 
+// Go to /post and read from query params to get message details
+indexRouter.get("/post", (req, res) => {
+  const post = {
+    text: req.query.text,
+    user: req.query.user,
+    added: req.query.added,
+  };
+  res.render("post", { post });
+});
+
 module.exports = { indexRouter, messages };
